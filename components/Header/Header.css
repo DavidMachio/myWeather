@@ -1,0 +1,15 @@
+header {
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+header ul {
+  font-size: 10px;
+  display: flex;
+  gap: 40px;
+}
+header h1 {
+  display: none;
+}

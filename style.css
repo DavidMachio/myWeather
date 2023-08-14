@@ -1,0 +1,38 @@
+:root {
+  --primary: white;
+  --secondary: rgb(23, 23, 23);
+  --terciary: rgb(151, 69, 151);
+  font-family: "Quicksand", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    11deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(33, 10, 47, 1) 71%,
+    rgba(59, 0, 89, 1) 100%
+  );
+  color: var(--primary);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: var(--terciary);
+}
+li {
+  list-style-type: none;
+}
+
+main {
+  height: 87vh;
+}
