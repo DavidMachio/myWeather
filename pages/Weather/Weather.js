@@ -2,7 +2,10 @@ import "./Weather.css";
 
 const template = () => {
   return `
-  <h1>hola</h1>
+  <div class="buscador">
+  <button id="my-btn" class="button"><img src="./icons/location.png" class="imglocation"></button>
+  <input type="text" id="my-input" class="input" placeholder="WHERE?"/>
+  </div>
   <article id="realtime-data"></article>
   `;
 };
@@ -36,10 +39,6 @@ const printData = (data) => {
 
   container.innerHTML = `
   <h3 class="date">${formattedDate}</h3>
-  <div class="buscador">
-  <input type="text" id="my-input" placeholder="..."/>
-  <button id="my-btn">search</button>
-  </div>
   <h3 class="hour">${formattedTime}</h3>
   <img src="/weathericons/mixweather.webp" alt="icono de precipitación"class="imgprecipitacion"/>
   <h4 class="temperature">${data.data.values.temperature}º</h4>

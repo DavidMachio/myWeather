@@ -1,9 +1,39 @@
+input {
+  text-transform: uppercase;
+  width: 120px;
+  height: auto;
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+  background-color: transparent;
+  color: var(--primary);
+}
+button {
+  padding: 5px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: transparent;
+  border: none;
+  color: var(--primary);
+  background-image: url(./public/icons/location.png);
+}
+.buscador {
+  width: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.137);
+  border-radius: 10px;
+}
+.imglocation {
+  filter: invert(100%);
+  width: 25px;
+}
 .resume {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 150px;
-  width: 100%;
+  width: 100vw;
 }
 .resume-box {
   display: flex;
@@ -11,6 +41,7 @@
   align-items: center;
 }
 article {
+  border: 2px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,25 +50,6 @@ article {
   border: black;
   background: white;
 }
-input {
-  background-color: transparent;
-  text-align: center;
-  width: 150px;
-  border: none;
-  font-size: 20px;
-  color: var(--primary);
-}
-.buscador {
-  width: 200px;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: rgba(244, 244, 244, 0.137);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-}
-
 .imgprecipitacion {
   height: 180px;
   width: auto;
