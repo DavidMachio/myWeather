@@ -24,6 +24,7 @@ button {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.137);
   border-radius: 10px;
+  margin: 10px;
 }
 .imglocation {
   filter: invert(100%);
@@ -36,12 +37,12 @@ button {
   width: 100vw;
 }
 .resume-box {
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 article {
-  border: 2px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,7 +51,7 @@ article {
   border: black;
   background: white;
 }
-.imgprecipitacion {
+.precipitation-img img {
   height: 180px;
   width: auto;
 }

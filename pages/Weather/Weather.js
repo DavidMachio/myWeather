@@ -3,9 +3,10 @@ import "./Weather.css";
 const template = () => {
   return `
   <div class="buscador">
-  <button id="my-btn" class="button"><img src="./icons/location.png" class="imglocation"></button>
+  <button id="my-btn" class="button"><img src="/icons/location.png" class="imglocation"></button>
   <input type="text" id="my-input" class="input" placeholder="WHERE?"/>
   </div>
+  <div id="imgprecipitation" class="precipitation-img"></div>
   <article id="realtime-data"></article>
   `;
 };
@@ -36,12 +37,28 @@ const printData = (data) => {
     hour: "numeric",
     minute: "numeric",
   });
+  const imgprecipitation = document.querySelector(".precipitation-img");
+  const probability = data.data.values.temperature;
+  if (probability > 40) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/mixweather.webp"/>`;
+  } else if (probability > 30) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/onlysun.webp"/>`;
+  } else if (probability > 20) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/sun.png"/>`;
+  } else if (probability > 10) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/rayo.png"/>`;
+  } else if (probability > 5) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/rayo2.webp"/>`;
+  } else if (probability > 0) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/snow.png"/>`;
+  } else if (probability < 0) {
+    imgprecipitation.innerHTML = `<img src="./weathericons/snowing.webp"/>`;
+  }
 
   container.innerHTML = `
+  <h4 class="temperature">${data.data.values.temperature}º</h4>
   <h3 class="date">${formattedDate}</h3>
   <h3 class="hour">${formattedTime}</h3>
-  <img src="/weathericons/mixweather.webp" alt="icono de precipitación"class="imgprecipitacion"/>
-  <h4 class="temperature">${data.data.values.temperature}º</h4>
   <container class="resume">
   <div class="resume-box">
     <ul>
